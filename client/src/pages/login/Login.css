@@ -1,0 +1,9 @@
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(185, 76, 76, 0.1);
+  }
+  .form-control {
+    margin-bottom: 10px;
+  }
