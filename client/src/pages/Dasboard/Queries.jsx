@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, Spin, Alert, Typography, Row, Tooltip, Button } from 'antd';
 import {
+  CalendarOutlined,
   CheckCircleOutlined,
   CloseCircleOutlined,
   FileTextOutlined,
-  MoreOutlined,
+
 } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 import './Queries.css';
@@ -62,44 +63,41 @@ const Queries = ({ username }) => {
       </div>
     {queries.length > 0 ? (
       <Row gutter={[16, 16]} className="queries-row">
-        {queries.map((query) => (
-          <Card
-            key={query.id}
-            className="query-card"
-            actions={[
-              <Tooltip title="View Description" key={query.id}>
-                <FileTextOutlined onClick={() => toggleDescription(query.id)} />
-              </Tooltip>,
-              query.status ? (
-                <Tooltip title="Resolved">
-                  <CheckCircleOutlined className="icon-resolved" />
-                </Tooltip>
+        {queries.length > 0 ? (
+        <Row gutter={[16, 16]} style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+          {queries.map((query) => (
+            <Card
+              key={query.id}
+              style={{ width: 300, minHeight: 300, marginBottom: 16, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderRadius: '8px', overflow: 'hidden' }}
+              actions={[
+                <Tooltip title="View Description" key={`desc-${query.id}`}><FileTextOutlined onClick={() => toggleDescription(query.id)} /></Tooltip>,
+                query.status ? <Tooltip title="Resolved" key={`resolved-${query.id}`}><CheckCircleOutlined style={{ color: 'green' }} /></Tooltip> : <Tooltip title="Unresolved" key={`unresolved-${query.id}`}><CloseCircleOutlined style={{ color: 'red' }} /></Tooltip>,
+                <Tooltip title={new Date(query.date).toLocaleDateString()} key={`date-${query.id}`}><CalendarOutlined /></Tooltip>,
+              ]}
+            >
+              <Title level={4}>{query.title}</Title>
+              <Paragraph>
+                <strong>Status:</strong> {query.status ? 'Resolved' : 'Unresolved'}
+              </Paragraph>
+              <Paragraph>
+                <strong>Date:</strong> {new Date(query.date).toLocaleDateString()}
+              </Paragraph>
+              {expandedId === query.id ? (
+                <>
+                  <Paragraph>
+                    <strong>Description:</strong> {query.description}
+                  </Paragraph>
+                  <a onClick={() => toggleDescription(query.id)}>Show Less</a>
+                </>
               ) : (
-                <Tooltip title="Unresolved">
-                  <CloseCircleOutlined className="icon-unresolved" />
-                </Tooltip>
-              ),
-              <Tooltip title="More" key={query.id}>
-                <MoreOutlined />
-              </Tooltip>,
-            ]}
-          >
-            <Title level={4}>{query.title}</Title>
-            <Paragraph>
-              <strong>Status:</strong> {query.status ? 'Resolved' : 'Unresolved'}
-            </Paragraph>
-            {expandedId === query.id ? (
-              <>
-                <Paragraph>
-                  <strong>Description:</strong> {query.description}
-                </Paragraph>
-                <Button type="link" onClick={() => toggleDescription(null)}>Show Less</Button>
-              </>
-            ) : (
-              <Button type="link" onClick={() => toggleDescription(query.id)}>Show More</Button>
-            )}
-          </Card>
-        ))}
+                <a onClick={() => toggleDescription(query.id)}>Show More</a>
+              )}
+            </Card>
+          ))}
+        </Row>
+      ) : (
+        <Alert message="No complaints found" type="info" showIcon />
+      )}
       </Row>
     ) : (
       <Alert message="No queries found" type="info" showIcon />
