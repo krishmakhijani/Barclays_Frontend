@@ -3,7 +3,6 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import {
   DesktopOutlined,
   PieChartOutlined,
-  TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
 import './Dashboard.css';
@@ -35,8 +34,6 @@ const DashboardPage = () => {
       case '2':
         return <Queries username={username}/>;
       case '3':
-        return <div>Team Content</div>;
-      case '4':
         return <div>Profile Content</div>;
       default:
         return <div>Select a menu item</div>;
@@ -46,14 +43,13 @@ const DashboardPage = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-        <div className="logo">
+        <div className="logo" style={{}}>
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" onClick={handleMenuClick}>
           <Menu.Item key="1" icon={<PieChartOutlined />}>Complaints</Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>Queries</Menu.Item>
-          <Menu.Item key="3" icon={<TeamOutlined />}>Team</Menu.Item>
-          <Menu.Item key="4" icon={<UserOutlined />}>Profile</Menu.Item>
+          <Menu.Item key="3" icon={<UserOutlined />}>Profile</Menu.Item>
         </Menu>
       </Sider>
       <Layout className="site-layout">

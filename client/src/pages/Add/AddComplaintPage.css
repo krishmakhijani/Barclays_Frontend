@@ -10,7 +10,7 @@
     border-radius: 4px;
   }
 
-  .submit-btn:hover, .cancel-btn:hover {
+    .submit-btn:hover, .cancel-btn:hover {
     opacity: 0.9;
   }
 
