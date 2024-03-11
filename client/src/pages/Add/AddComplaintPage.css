@@ -1,0 +1,25 @@
+.add-complaint-card {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .submit-btn, .cancel-btn {
+    border-radius: 4px;
+  }
+
+  .submit-btn:hover, .cancel-btn:hover {
+    opacity: 0.9;
+  }
+
+  /* Additional CSS for hover effects, margins, colors, borders */
+  .input, .ant-input-textarea {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .input:hover, .ant-input-textarea:hover {
+    border-color: #1890ff;
+  }

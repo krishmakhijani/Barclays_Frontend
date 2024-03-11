@@ -4,6 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { Form, Input, Button, Card } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import logo from '../Dasboard/barclays-icon.svg';
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -33,8 +34,15 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card title="Login" bordered={false} style={{ width: 300 }}>
+    <div className="login-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column' }}>
+    <div style={{paddingLeft: '40px'}}>
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=40&duration=3000&pause=500&random=false&width=800&height=70&lines=Welcome+to+Barclays+Digital+Box" alt="Typing SVG" /></a>
+    </div>
+
+      <Card title="Login" bordered={false} style={{ width: 300}}>
+      <div className="logo">
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
         <Form
           name="normal_login"
           className="login-form"

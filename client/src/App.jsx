@@ -1,9 +1,6 @@
 import './App.css'
-
 import DashboardPage from './pages/Dasboard/dashboard';
 import Login from './pages/login/LoginPage';
-
-
 
 
 import {
@@ -13,7 +10,6 @@ import {
 } from 'react-router-dom';
 
 function App() {
-
 
 
   return (

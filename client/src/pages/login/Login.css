@@ -1,9 +1,82 @@
+/* General Styles for the Login Page */
 .login-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(185, 76, 76, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5; /* Light grey background */
+  flex-direction: row;
+}
+
+/* Card Styles */
+.ant-card {
+  width: 100%;
+  max-width: 400px; /* Limit the maximum width */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  border-radius: 8px; /* Rounded corners for the card */
+}
+
+/* Form Styles */
+.ant-form-item {
+  margin-bottom: 16px; /* Consistent margin */
+}
+
+/* Input Styles */
+.ant-input {
+  border-radius: 20px; /* Rounded edges for input fields */
+}
+
+/* Button Styles */
+.login-form-button {
+  width: 100%;
+  height: 40px; /* Fixed height for uniformity */
+  border-radius: 20px; /* Rounded button */
+  font-weight: 500; /* Slightly bolder font for the button */
+  background-color: #1890ff; /* Primary color */
+  border-color: #1890ff; /* Match border color */
+}
+
+.login-form-button:hover,
+.login-form-button:focus {
+  background-color: #40a9ff; /* Lighter on hover/focus */
+  border-color: #40a9ff;
+}
+
+/* Icon Styles */
+.site-form-item-icon {
+  color: rgba(0, 0, 0, 0.25); /* Subtle icon color */
+}
+
+/* Additional Styles for Enhanced User Experience */
+.ant-card-head-title {
+  text-align: center; /* Center-align the card title */
+  font-size: 24px; /* Larger font size for the title */
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px; /* Smaller padding on smaller screens */
   }
-  .form-control {
-    margin-bottom: 10px;
+  .ant-card {
+    margin: 0 15px; /* Ensure some spacing on the sides on smaller screens */
   }
+}
+
+/* Logo Container Styles */
+.login-container .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px; /* Space between the logo and the login form */
+}
+
+/* Logo Image Styles */
+.login-container .App-logo {
+  width: 100px; /* Adjust the width as necessary */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.login-container .App-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
