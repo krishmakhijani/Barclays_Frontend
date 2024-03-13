@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Input, Select, Spin } from 'antd';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ComplaintCard from './ComplaintCard'; // Make sure to create this component
 import './ComplaintsPage.css'; // Add your CSS for styling
+import QueryCard from './QueryCard';
 
 const { Search } = Input;
 const { Option } = Select;
@@ -55,7 +55,7 @@ const QueriesPage = () => {
       ) : (
         <div className="complaints-container">
           {filteredQueries.map(queries => (
-            <ComplaintCard key={queries.id} complaint={queries} />
+            <QueryCard key={queries.id} query={queries} />
           ))}
         </div>
       )}

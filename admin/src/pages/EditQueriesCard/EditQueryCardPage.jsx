@@ -4,22 +4,22 @@ import { Button, Form, Select } from 'antd';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PropTypes from 'prop-types';
-import './EditComplaintCardPage.css'; // Ensure you create this CSS file for styling
+import './EditComplaintCardPage.css';
 
 const { Option } = Select;
 
-const EditComplEditQueryPageCard = ({ id, clientId, title, description, status, onEditComplete }) => {
+const EditQueryPageCard = ({ id, clientId, title, description, status, onEditComplete }) => {
   const [newStatus, setNewStatus] = useState(status ? 'true' : 'false');
 
   const handleSubmit = async () => {
     try {
-      await axios.post('https://barclaysapp.rakikanneeswaran.workers.dev/api/admin/changecomplaintstatus', {
+      await axios.post('https://barclaysapp.rakikanneeswaran.workers.dev/api/admin/changequerystatus', {
         id: id,
         status: newStatus === 'true'
       });
       console.log(id,status);
       toast.success('Query status updated successfully');
-      onEditComplete(); // Call this function to signal that editing is complete and possibly switch view
+      onEditComplete();
     } catch (error) {
       toast.error('Failed to update query status');
     }
@@ -56,7 +56,7 @@ const EditComplEditQueryPageCard = ({ id, clientId, title, description, status, 
   );
 };
 
-EditComplEditQueryPageCard.propTypes = {
+EditQueryPageCard.propTypes = {
   id: PropTypes.number.isRequired,
   clientId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -65,4 +65,4 @@ EditComplEditQueryPageCard.propTypes = {
   onEditComplete: PropTypes.func.isRequired,
 };
 
-export default EditComplEditQueryPageCard;
+export default EditQueryPageCard;
