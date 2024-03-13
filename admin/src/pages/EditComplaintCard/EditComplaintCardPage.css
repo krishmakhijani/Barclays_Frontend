@@ -1,0 +1,37 @@
+.edit-complaint-page {
+  max-width: 600px; /* Sets a max width for the form */
+  margin: 20px auto; /* Centers the form on the page */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the form */
+  border-radius: 8px; /* Rounds the corners of the form */
+  background-color: #ffffff; /* Sets a white background for the form */
+  animation: fadeIn 0.5s ease-out;
+}
+
+.ant-form-item-label > label {
+  color: #595959; /* Dark grey color for the labels */
+  font-weight: bold; /* Makes the label texts bold */
+}
+
+.ant-form-item-control-input-content {
+  margin-top: 8px; /* Adds a bit of margin above the form inputs for better spacing */
+}
+
+button.ant-btn-primary {
+  background-color: #1890ff; /* Sets the button color */
+  border-color: #1890ff; /* Sets the button border color */
+  width: 50%; /* Makes the button full width */
+  font-size: 16px; /* Sets a larger font size for the button */
+  height: 40px; /* Sets a fixed height for the button */
+  border-radius: 4px; /* Rounds the button corners */
+}
+
+button.ant-btn-primary:hover {
+  background-color: #40a9ff; /* Lighter blue for the hover state */
+  border-color: #40a9ff; /* Lighter blue border for the hover state */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

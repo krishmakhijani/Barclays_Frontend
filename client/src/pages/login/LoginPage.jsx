@@ -6,7 +6,7 @@ import { Form, Input, Button, Card } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import logo from '../Dasboard/barclays-icon.svg';
 
-const Login = () => {
+const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -77,4 +77,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

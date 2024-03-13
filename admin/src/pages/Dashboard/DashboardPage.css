@@ -1,0 +1,42 @@
+/* DashboardPage.css */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: -32px;
+    margin: 50px 30px 40px 40px ;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-item:hover {
+    transform: scale(1.05);
+    border-left: 4px solid #1890ff;
+  }
+
+  .ant-menu-item-selected {
+    background-color: #1890ff !important;
+    font-weight: bold;
+  }
+
+  .ant-layout-content {
+    transition: all 0.3s ease-out;
+  }
+
+  .content {
+    padding: 24px;
+    background: #fff;
+    min-height: 360px;
+    transition: transform 0.3s ease-out;
+  }
+
+  .content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
