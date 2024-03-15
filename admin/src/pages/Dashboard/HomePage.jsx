@@ -3,10 +3,10 @@ import { PieChart, Pie, Cell, Tooltip as RechartsTooltip, Legend, LineChart, Lin
 import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
 
 const dataPie = [
-  { name: 'Category A', value: 400 },
-  { name: 'Category B', value: 300 },
-  { name: 'Category C', value: 300 },
-  { name: 'Category D', value: 200 },
+  { name: 'Total Complaints', value: 400 },
+  { name: 'Total Queries', value: 300 },
+  { name: 'Solved', value: 300 },
+  { name: 'Unsolved', value: 200 },
 ];
 
 const dataLine = [
