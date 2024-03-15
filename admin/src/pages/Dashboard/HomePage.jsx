@@ -10,13 +10,13 @@ const dataPie = [
 ];
 
 const dataLine = [
-  { name: 'Jan', Solved: 1000, Unsolved: 2400, amt: 2400 },
-  { name: 'Feb', Solved: 1800, Unsolved: 1398, amt: 2210 },
-  { name: 'Mar', Solved: 1200, Unsolved: 9800, amt: 2290 },
-  { name: 'Apr', Solved: 2278, Unsolved: 3908, amt: 2000 },
-  { name: 'May', Solved: 8000, Unsolved: 4800, amt: 2181 },
-  { name: 'Jun', Solved: 2239, Unsolved: 3800, amt: 2500 },
-  { name: 'Jul', Solved: 1349, Unsolved: 4300, amt: 2100 },
+  { name: 'Jan', Unsolved: 1000, Solved: 2400, amt: 2400 },
+  { name: 'Feb', Unsolved: 1800, Solved: 1398, amt: 2210 },
+  { name: 'Mar', Unsolved: 1200, Solved: 9800, amt: 2290 },
+  { name: 'Apr', Unsolved: 2278, Solved: 3908, amt: 2000 },
+  { name: 'May', Unsolved: 8000, Solved: 4800, amt: 2181 },
+  { name: 'Jun', Unsolved: 2239, Solved: 3800, amt: 2500 },
+  { name: 'Jul', Unsolved: 1349, Solved: 4300, amt: 2100 },
 ];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
