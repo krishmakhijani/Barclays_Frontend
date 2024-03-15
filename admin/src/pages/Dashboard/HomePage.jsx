@@ -15,7 +15,7 @@ const dataLine = [
   { name: 'Mar', Solved: 1200, Unsolved: 9800, amt: 2290 },
   { name: 'Apr', Solved: 2278, Unsolved: 3908, amt: 2000 },
   { name: 'May', Solved: 8000, Unsolved: 4800, amt: 2181 },
-  { name: 'Jun', uSolvedv: 2239, Unsolved: 3800, amt: 2500 },
+  { name: 'Jun', Solved: 2239, Unsolved: 3800, amt: 2500 },
   { name: 'Jul', Solved: 1349, Unsolved: 4300, amt: 2100 },
 ];
 
