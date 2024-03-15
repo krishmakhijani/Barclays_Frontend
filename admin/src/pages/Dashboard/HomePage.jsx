@@ -28,12 +28,11 @@ const HomePage = () => {
         <Col span={8}>
           <Card>
             <Statistic
-              title="Revenue"
-              value={112893}
-              precision={2}
+              title="Progress"
+              value={96}
               valueStyle={{ color: '#234abc' }}
-              prefix="$"
-              suffix="USD"
+              prefix={<ArrowUpOutlined />}
+              suffix="%"
             />
           </Card>
         </Col>
@@ -51,7 +50,7 @@ const HomePage = () => {
         <Col span={8}>
           <Card>
             <Statistic
-              title="Downloads"
+              title="Solved"
               value={93}
               valueStyle={{ color: '#cf1322' }}
               prefix={<ArrowDownOutlined />}
@@ -92,8 +91,8 @@ const HomePage = () => {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-              <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+              <Line type="monotone" dataKey="Solved" stroke="#FF0000" activeDot={{ r: 8 }} />
+              <Line type="monotone" dataKey="Unsolved" stroke="#00FF00" />
             </LineChart>
           </Card>
         </Col>
