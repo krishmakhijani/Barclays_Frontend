@@ -62,7 +62,7 @@ const HomePage = () => {
 
       <Row gutter={16} style={{ marginTop: '20px' }}>
         <Col span={12}>
-          <Card title="Sales Distribution" bordered={false}>
+          <Card title="Usage" bordered={false}>
             <PieChart width={400} height={300}>
               <Pie
                 dataKey="value"
@@ -84,15 +84,15 @@ const HomePage = () => {
           </Card>
         </Col>
         <Col span={12}>
-          <Card title="Monthly Sales" bordered={false}>
+          <Card title="Monthly Usage" bordered={false}>
             <LineChart width={400} height={300} data={dataLine}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
               <YAxis />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="Solved" stroke="#FF0000" activeDot={{ r: 8 }} />
-              <Line type="monotone" dataKey="Unsolved" stroke="#00FF00" />
+              <Line type="monotone" dataKey="Unsolved" stroke="#FF0000" activeDot={{ r: 8 }} />
+              <Line type="monotone" dataKey="Solved" stroke="#00FF00" />
             </LineChart>
           </Card>
         </Col>
